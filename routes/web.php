@@ -18,3 +18,7 @@ $app->get('/', function () use ($app) {
 $app->get('/hello', function () use ($app) {
     return '<h1>Hello world!</h1>';
 });
+
+$app->get('file', [
+    'as' => 'file', 'uses' => 'FileController@readFile'
+]);
